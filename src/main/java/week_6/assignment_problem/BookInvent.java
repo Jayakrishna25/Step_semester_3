@@ -1,0 +1,31 @@
+package main.java.week_6.assignment_problem;
+class BookInventory {
+    private String title;
+    private String author;
+    private int copiesAvailable;
+
+    public BookInventory(String title, String author, int copiesAvailable) {
+        this.title = title;
+        this.author = author;
+        this.copiesAvailable = copiesAvailable;
+    }
+
+    public void printEntry() {
+        System.out.println(title + " by " + author + " - " + copiesAvailable + " copies available");
+    }
+}
+
+public class BookInvent {
+    public static void main(String[] args) {
+        BookInventory[] inventory = {
+                new BookInventory("Clean Code", "Robert C. Martin", 3),
+                new BookInventory("Effective Java", "Joshua Bloch", 5),
+                new BookInventory("Refactoring", "Martin Fowler", 0),
+                new BookInventory("Design Patterns", "GoF", 2)
+        };
+
+        for (BookInventory book : inventory) {
+            book.printEntry();
+        }
+    }
+}
